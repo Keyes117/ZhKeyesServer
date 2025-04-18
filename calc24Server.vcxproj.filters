@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="net">
+      <UniqueIdentifier>{bf2b6a7b-bef4-46c2-b4c6-9dc0c1a301fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{2da9f3e2-3f4e-45c7-812c-bff598107fe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="appsrc">
+      <UniqueIdentifier>{83c80a62-2a54-4b4f-b851-8bbec60dfe9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{d7358156-e31c-40bc-a946-b0684eca2f84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="appsrc\Calc24Protocol.h">
+      <Filter>appsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="appsrc\Calc24Server.h">
+      <Filter>appsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="appsrc\Calc24Session.h">
+      <Filter>appsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Acceptor.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ByteBuffer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Epoll.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\EventDispatcher.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\EventLoop.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\IOMultiplex.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Poll.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Select.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\TCPConnection.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\TCPServer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ThreadPool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="net\WakeUpEventDispatcher.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\Timer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\TimerService.h">
+      <Filter>net</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="appsrc\Calc24Server.cpp">
+      <Filter>appsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="appsrc\Calc24Session.cpp">
+      <Filter>appsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Acceptor.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ByteBuffer.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Epoll.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\EventLoop.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Poll.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Select.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\TCPConnection.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\TCPServer.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ThreadPool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="util\util.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="net\WakeUpEventDispatcher.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\Timer.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+</Project>
