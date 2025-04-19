@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NET_TIMERSERVICE_H_
+#define NET_TIMERSERVICE_H_
 
 #include <functional>
 #include <stdint.h>
@@ -22,3 +23,4 @@ public:
 
 };
 
+#endif //!NET_TIMERSERVICE_H_

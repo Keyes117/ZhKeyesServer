@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NET_SELECT_H_
+#define NET_SELECT_H_
 #include "IOMultiplex.h"
 
 /**
@@ -50,3 +51,4 @@ private:
 
 };
 
+#endif

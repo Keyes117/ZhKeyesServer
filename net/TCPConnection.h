@@ -1,4 +1,8 @@
-#pragma once
+/**
+ * @brief TCPConenction 连接类
+ */
+#ifndef NET_TCPCONNECTION_H_
+#define NET_TCPCONNECTION_H_
 #include "EventDispatcher.h"
 
 #include <functional>
@@ -7,6 +11,7 @@
 #include "ByteBuffer.h"
 #include "EventLoop.h"
 
+
 class TCPConnection;
 
 //readcallBack 如果返回False，则业务逻辑认为解包出错
@@ -14,7 +19,6 @@ using ReadCallBack = std::function<void(ByteBuffer&)>;
 using WriteCallBack = std::function<void()>;
 //using CloseCallBack = std::function<void(const std::shared_ptr<TCPConnection>&)>;
 using CloseCallBack = std::function<void()>;
-
 
 
 //CRTP
@@ -82,3 +86,4 @@ private:
     std::shared_ptr<EventLoop>  m_spEventLoop;
 };
 
+#endif //!NET_TCPCONNECTION_H_

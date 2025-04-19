@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NET_THREADPOLL_H_
+#define NET_THREADPOLL_H_
 /**
  * @zhkeyes 2024/4/7 œﬂ≥Ã≥ÿ¿‡
  */
@@ -40,3 +41,4 @@ private:
     ThreadPool& operator=(ThreadPool&& rhs) = delete;
 };
 
+#endif //!NET_THREADPOLL_H_

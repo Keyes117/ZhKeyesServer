@@ -1,5 +1,6 @@
 
-#pragma once
+#ifndef NET_TIMER_H_
+#define NET_TIMER_H_
 #include "TimerService.h"
 #include <cstdint>
 
@@ -39,3 +40,4 @@ private:
 
     int64_t     m_nextTriggeredTimeMs;
 };
+#endif //!NET_TIMER_H_

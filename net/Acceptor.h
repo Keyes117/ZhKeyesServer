@@ -1,6 +1,11 @@
-#pragma once
-#include "EventDispatcher.h"
+/**
+ * @brief 从TcpServer中分离出来的侦听功能 2025/4/7
+ */
 
+#ifndef NET_ACCEPTOR_H_
+#define NET_ACCEPTOR_H_
+
+#include "EventDispatcher.h"
 
 #include "EventLoop.h"
 #include <functional>
@@ -37,3 +42,4 @@ private:
     AcceptCallBack  m_acceptCallBack;
 };
 
+#endif

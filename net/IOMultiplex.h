@@ -1,6 +1,6 @@
 #pragma once
 /*
-* zhkeyes 2025/4/6 remake
+* zhkeyes 2025/4/6
 * IO复用函数包装接口类
 *
 */

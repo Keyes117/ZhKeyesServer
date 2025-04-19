@@ -33,4 +33,7 @@
 
 
 .vs/
+x64/
 *.vcxproj.user
+*.sln
+calc24Server/

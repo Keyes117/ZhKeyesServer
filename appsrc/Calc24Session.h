@@ -1,4 +1,5 @@
-#pragma once
+#ifndef APPSRC_CALC24SESSION_H_
+#define AAPSRC_CALC24SESSION_H_
 
 #include <atomic>
 #include <memory>
@@ -77,3 +78,4 @@ private:
     std::atomic< int8_t>            m_status{ static_cast<int8_t>(SessionStatus::IDLE) };
 };
 
+#endif

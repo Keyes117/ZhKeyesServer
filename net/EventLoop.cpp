@@ -172,6 +172,10 @@ bool EventLoop::createWakeUpfd()
 
 void EventLoop::doOtherTasks()
 {
+
+    //为了减少 锁的颗粒度，避免耗时任务一直占用锁
+    //将要执行的任务 拿出来
+    //swap 不进行任何拷贝和移动
     std::vector<CustomTask> tasks;
     {
         std::lock_guard<std::mutex> scopedLock(m_mutexTasks);
@@ -194,11 +198,15 @@ void EventLoop::checkAndDoTimers()
         (std::chrono::system_clock::now().time_since_epoch()).count();
 
 
+    //这个标志的意义在于，如果一个事件在他的事件逻辑内调用一次添加或者移除的逻辑，
+    //就会导致 自己把自己删除和其他的死锁问题。
+    //因此处理某一个定时器的逻辑时，不在做增加和删除的操作
     m_isCheckTimers = true;
     {
         //std::lock_guard<std::mutex> scopedLock(m_mutexTimers);
         for (auto iter = m_timers.begin(); iter != m_timers.end(); iter++)
         {
+            //这里检查当前 事件 和 事件下一次触发的事件
             while (nowMs >= (*iter)->nextTriggeredTimeMs())
             {
                 std::cout << "addTimerInternal, timerID " << (*iter)->getId()
@@ -256,6 +264,7 @@ void EventLoop::addTimerInternal(std::shared_ptr<Timer> spTimer)
 
 void EventLoop::removeTimerInternal(int64_t timerId)
 {
+    //采用唤醒的机制，如果不是当前线程所属事件循环，则交给他进行自定义任务处理
     if (isCallableInOwnerThread())
     {
         if (m_isCheckTimers)

@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef APPSRC_CALC24PROTOCOL_H_
+#define APPSRC_CALC24PROTOCOL_H_
 
 #include <stdint.h>
 
@@ -20,3 +20,5 @@ struct WelconMsg
     uint32_t msgType;
     char welcomeMsg[32];
 };
+
+#endif //!APPSRC_CALC24PROTOCOL_H_

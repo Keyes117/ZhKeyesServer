@@ -1,6 +1,5 @@
-#pragma once
-#pragma once
-#include "IOMultiplex.h"
+#ifndef NET_POLL_H_
+#define NET_POLL_H_
 
 /**
  * @zhkeyes 2025/4/6
@@ -11,6 +10,8 @@
   *   int select(int nfds, fd_set *readfds, fd_set *writefds,
   *               fd_set *exceptfds, struct timeval *timeout);
   */
+
+#include "IOMultiplex.h"
 
 #ifdef _WIN32
 #else
@@ -49,3 +50,4 @@ private:
 
 };
 
+#endif

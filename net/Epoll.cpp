@@ -12,9 +12,9 @@
 
 #ifdef _WIN32
 
-#include <sys/epoll.h>
 #else
 
+#include <sys/epoll.h>
 Epoll::Epoll()
 {
     m_epollfd = ::epoll_create1(EPOLL_CLOEXEC);

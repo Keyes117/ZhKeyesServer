@@ -1,6 +1,13 @@
-#pragma once
+/**
+ * @brief Epoll 2025/4/6
+ */
+
+#ifndef NET_EPOLL_H_
+#define NET_EPOLL_H_
+
 
 #include  "IOMultiplex.h"
+
 
 #ifndef _WIN32
 
@@ -10,6 +17,7 @@
 #include <sys/unistd.h>
 
 #include <map>
+
 
 
 class Epoll : public IOMultiplex
@@ -44,4 +52,6 @@ private:
     Epoll& operator=(Epoll&& rhs) = delete;
 };
 
+
 #endif // !_WIN32
+#endif // !NET_EPOLL_H_

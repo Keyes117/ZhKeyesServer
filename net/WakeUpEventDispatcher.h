@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef NET_WAKEUPEVENTDISPATCHER_H_
+#define NET_WAKEUPEVENTDISPATCHER_H_
 #include "EventDispatcher.h"
 
 class WakeUpEventDispatcher :public  EventDispatcher
@@ -23,3 +23,4 @@ private:
     bool            m_enableWrite{ false };
 };
 
+#endif //! NET_WAKEUPEVENTDISPATCHER_H_

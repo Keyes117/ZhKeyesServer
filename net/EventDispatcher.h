@@ -1,8 +1,14 @@
-#pragma once
 /**
  * @zhkeyes 2025/4/6
  * 事件分发接口类
  */
+
+#ifndef NET_EVENTDISPATCHER_H_
+#define NET_EVENTDISPATCHER_H_
+
+
+
+
 class EventDispatcher
 {
 public:
@@ -17,3 +23,4 @@ public:
 
 };
 
+#endif // !NET_EVENTDISPATCHER_H_

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef NET_TCPSERVER_H_
+#define NET_TCPSERVER_H_
+
 
 #include <cstdint>
 #include <string>
@@ -58,5 +60,4 @@ private:
     DisConnectedCallBack        m_disconnectionCallBack;
 
 };
-
-
+#endif

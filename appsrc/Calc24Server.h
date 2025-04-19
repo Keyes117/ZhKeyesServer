@@ -1,4 +1,5 @@
-#pragma once
+#ifndef APPSRC_CALC24SERVER_H_
+#define APPSRC_CALC24SERVER_H_
 
 #include "TCPServer.h"
 
@@ -38,3 +39,4 @@ private:
     int64_t                                             m_checkHandupTimerID{ 0 };
 };
 
+#endif //!APPSRC_CALC24SERVER_H_
